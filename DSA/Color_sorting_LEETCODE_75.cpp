@@ -21,20 +21,37 @@ void Display(vector<int> &v){
 //     }
 // }
 
-void M2(vector<int> &v){
-    int c1=0, c0=0, c2=0;
-    for(int i=0; i<v.size(); i++){
-        if(v[i]==0) c0++;
-        else if(v[i]==1) c1++;
-        else if(v[i]==2) c2++;
+// void M2(vector<int> &v){
+//     int c1=0, c0=0, c2=0;
+//     for(int i=0; i<v.size(); i++){
+//         if(v[i]==0) c0++;
+//         else if(v[i]==1) c1++;
+//         else if(v[i]==2) c2++;
+//     }
+
+//     cout<<"Array after sorting: "<<endl;
+//     for(int i=0; i<v.size(); i++){
+//         if(i<c0) v[i]=0;
+//         else if(i<(c0+c1)) v[i]=1;
+//         else v[i]=2;
+//     }
+// }
+
+void M3(vector<int> &v){
+    int lo=0, mid=0, hi=v.size()-1;
+    while(mid<=hi){
+        if(v[mid]==2){
+            swap(v[hi],v[mid]);
+            hi--;
+        }
+        if(v[mid]==0){
+            swap(v[lo],v[mid]);
+            mid++;
+            lo++;
+        }
+        if(v[mid]==1) mid++;
     }
 
-    cout<<"Array after sorting: "<<endl;
-    for(int i=0; i<v.size(); i++){
-        if(i<c0) v[i]=0;
-        else if(i<(c0+c1)) v[i]=1;
-        else v[i]=2;
-    }
 }
 
 int main(){
@@ -56,7 +73,11 @@ int main(){
     // cout<<"Array after sorting: "<<endl;
     // Display(v);
 
-    M2(v);
+    // M2(v);
+    // Display(v);
+
+    M3(v);
+    cout<<"Array after sorting: "<<endl;
     Display(v);
 
 }
