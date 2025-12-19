@@ -20,15 +20,15 @@ class Time{
     
     void setto24(){
         if(i==1){
-            cout<<endl<<"Current time in 24 hour forat is:-"<<endl;
+            cout<<endl<<"Current time in 24 hour format is:-"<<endl;
             cout<<hours<<" : "<<minutes<<" : "<<seconds<<endl;
         }
         else if(i==2){
-            cout<<endl<<"Current time in 24 hour forat is:-"<<endl;
+            cout<<endl<<"Current time in 24 hour format is:-"<<endl;
             cout<<hours+12<<" : "<<minutes<<" : "<<seconds<<endl;
         }
         else{
-            cout<<endl<<"Current time in 24 hour forat is:-"<<endl;
+            cout<<endl<<"Current time in 24 hour format is:-"<<endl;
             cout<<hours<<" : "<<minutes<<" : "<<seconds<<endl;
         }
     }
@@ -37,15 +37,15 @@ class Time{
         if(hours>12){
             i=2;
             hours=hours-12;
-            cout<<endl<<"Current time in 24 hour forat is:-"<<endl;
+            cout<<endl<<"Current time in 12 hour format is:-"<<endl;
             cout<<hours<<" : "<<minutes<<" : "<<seconds<<" pm"<<endl;
         }
         else if(hours<12){
-            cout<<endl<<"Current time in 24 hour forat is:-"<<endl;
+            cout<<endl<<"Current time in 12 hour format is:-"<<endl;
             cout<<hours<<" : "<<minutes<<" : "<<seconds<<" am"<<endl;
         }
         else{
-            cout<<endl<<"Current time in 24 hour forat is:-"<<endl;
+            cout<<endl<<"Current time in 12 hour format is:-"<<endl;
             cout<<hours<<" : "<<minutes<<" : "<<seconds<<" pm"<<endl;
         }
     }
